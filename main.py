@@ -10,19 +10,15 @@ from supplement import get_remedies
 
 app = Flask(__name__)
 
-@app.route('/home', methods =['GET','POST'])
-def home():
-    if (request.method == 'POST'):
-        user_input = request.form.get('upload_form')
-        response = get_remedies(user_input)
-        response = jsonify({'response': response})
-    return render_template('home.html')
-
-
-
-
-
 @app.route('/', methods =['GET','POST'])
+def home():
+    if request.method == 'POST':
+        user_input = request.form.get('user_input')
+        response = get_remedies(user_input)
+        return render_template('home.html', response=response)
+    return render_template('home.html', response=None)
+
+@app.route('/home', methods =['GET','POST'])
 def home2():
     return render_template('home.html')
 

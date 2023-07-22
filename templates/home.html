@@ -1,23 +1,7 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div>
-        <h1>Welcome to NaturallyFit!</h1>
-        <p>What is your issue?</p>
-        <input type="text">
-        <button>generate</button>
-    </div>
-</body>
-</html> -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="icon" type="image/png" href="../static/assets/food.svg">
+    {# <link rel="icon" type="image/png" href="../static/assets/food.svg"> #}
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.7.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='public/home.css') }} ">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lobster Two">
@@ -32,14 +16,16 @@
         <div class="navbar flex">
             <div class="sec-1">
                 <div class="navbar-logo">
-                    <img src="static/assets/svg/logo-color.png" alt="Logo" width="175px" height="50px">
+                    <a href="/">
+                        <img src="static/assets/svg/logo-color.png" alt="Logo" width="175px" height="50px">
+                    </a>
                 </div>
             </div>
             <div class="sec-2">
                 <div class="nav-items flex">
-                    <div class="nav-item"> <a href="">Home </a></div>
-                    <div class="nav-item"> <a href="about">About Us</a></div>
-                    <div class="nav-item"> <a href = "contact">Contact </a></div>
+                    <div class="nav-item"> <a href="/">Home </a></div>
+                    <div class="nav-item"> <a href="/about">About Us</a></div>
+                    <div class="nav-item"> <a href = "/contact">Contact </a></div>
                 </div>
             </div>
         </div>
@@ -49,39 +35,36 @@
         <div class="form">
             <h1>NATURALLY FIT</h1>
             <h4>Natural solutions to your health issues!</h4>
-            
-            <form method = 'POST'>
-            <!-- <p style="background-image: url('E:\background.jpg');"> -->
-            <input id="upload_form" name = "upload_form" type = "text">
-            </input>
-            <!-- </p> -->
-            <div class = "submit">
-            <button id ="submit-button">Submit</button>
+        
+        <form method="POST" action="/">
+            <input type="text" id="user_input" name="user_input" required>
+            <div class="submit">
+                <button type="submit" id = "submit-button">Submit</button>
             </div>
         </form>
+        
         </div>
     </div>
 
     
     <div class="output">
-        <div class="response">
-            <h2>
-                {{ response }}
-            </h2>
+        <div class="shadow">
+            {% if response %}
+                <div class="response">
+                    <h2>You entered: {{ response[0] }}</h2>
+                </div>
+
+                <div class="response">
+                    <h2>You entered: {{ response[1] }}</h2>
+                </div>
+                
+                <div class="response">
+                    <h2>You entered: {{ response[2] }}</h2>
+                </div>
+
+            {% endif %}
         </div>
-        <!-- <div class="response">
-            <h2>
-                {{ response }}
-            </h2>
-        </div> -->
-        <!-- <div class="response">
-            <h2>
-                {{ response }}
-            </h2>
-        </div> -->
     </div>
-
-
 
     <!-- <script>
         const form = document.getElementById('upload-form');
