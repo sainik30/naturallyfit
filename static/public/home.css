@@ -171,11 +171,13 @@ form input[type="submit"]:hover {
 }
 
 .output {
-    background-image: url(../files/Holy-basil.jpg);
-    background-size: contain;
+    /* background-image: url(../files/Holy-basil.jpg);
+    background-size: contain; */
     /* display: flex; */
+    background: rgb(90,163,95);
+    background: linear-gradient(270deg, rgba(90,163,95,0.9640449929971989) 0%, rgba(7,80,51,1) 0%, rgba(50,157,118,1) 40%);
     width: 100%;
-    height: 100vh;
+    height: max-content;
 }
 
 .shadow {
@@ -229,7 +231,7 @@ a{
 }
 
 a:hover {
-    background-color: #8e2470;
+    background-color: #248e57;
     border-bottom: 1px solid white;
 }
 
