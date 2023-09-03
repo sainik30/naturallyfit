@@ -6,6 +6,7 @@ import os
 from wtforms.validators import InputRequired
 import requests
 from supplement import get_remedies
+#from textwrap3 import wrap
 
 
 app = Flask(__name__)

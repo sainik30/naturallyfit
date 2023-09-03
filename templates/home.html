@@ -34,7 +34,9 @@
     <div class="contents">
         <div class="form">
             <h1>NATURALLY FIT</h1>
-            <h4>Natural solutions to your health issues!</h4>
+            <h4>Natural solutions to your health issues! <br> 
+                Insert your health issues so we can solve it!</h4>
+            
         
         <form method="POST" action="/">
             <input type="text" id="user_input" name="user_input" required>
@@ -51,19 +53,21 @@
         <div class="shadow">
             {% if response %}
                 <div class="response">
-                    <h2>You entered: {{ response[0] }}</h2>
+                    <h2>Answer:{{ response[0] }}</h2>
                 </div>
 
                 <div class="response">
-                    <h2>You entered: {{ response[1] }}</h2>
+                    <h2>Answer: {{ response[1] }}</h2>
                 </div>
                 
                 <div class="response">
-                    <h2>You entered: {{ response[2] }}</h2>
+                    <h2>Answer: {{ response[2] }}</h2>
                 </div>
 
             {% endif %}
         </div>
+
+        
     </div>
 
     <!-- <script>
