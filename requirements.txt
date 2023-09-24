@@ -1,0 +1,9 @@
+# Flask Framework
+flask
+flask_wtf
+os
+requests
+werkzeug.utils
+supplement
+json
+openai
