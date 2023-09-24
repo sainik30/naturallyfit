@@ -1,12 +1,9 @@
 from flask import Flask, render_template, jsonify, request
 from flask_wtf import FlaskForm
-from wtforms import FileField, SubmitField
 from werkzeug.utils import secure_filename
 import os
-from wtforms.validators import InputRequired
 import requests
 from supplement import get_remedies
-#from textwrap3 import wrap
 
 
 app = Flask(__name__)
