@@ -7,7 +7,7 @@ def get_remedies(user_input):
     response = []
     prompt = "Remedies, natural healthy food, yoga exercise for " + user_input +  ". Give the output in 3 separate blocks of paragraph with points in each paragraph."
 
-    openai.api_key = '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'
+    openai.api_key = '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'
     messages = [{"role": "system", "content": "You are an intelligent assistant."}]
 
     # for i in range(len(prompts)):
