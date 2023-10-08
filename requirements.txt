@@ -4,3 +4,4 @@ flask_wtf
 requests
 openai
 gunicorn
+python-dotenv
