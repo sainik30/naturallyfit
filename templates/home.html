@@ -34,8 +34,12 @@
 
     <div class="contents">
         <div class="form">
-            <h1>NATURALLY FIT</h1>
-            <h4>Natural solutions to your health issues! <br> Insert your health issues so we can solve it!</h4>
+            <h1>Naturally Fit</h1>
+            <h4>
+                If you are on your health and fitness journey or if
+                you are looking for information on diet, yoga and ayurveda for any health issues,
+                Type it here…
+            </h4>
         <form method="POST" action="/">
             <div id="loading-screen" style="display: none;" class="loading-content">
                 <div class="loading-text">
@@ -46,12 +50,12 @@
             <div class="submit">
                 <button type="submit" id = "submit-button">Submit</button>
             </div>
-        </form>
-        
+            <a href="#resp" style= "display: none;" id ="scroll">Scroll</a>
+        </form> 
         </div>
     </div>
     
-    <div class="output">
+    <div class="output" id="resp">
         <div class="shadow">
             {% if response %}
             <div class="response">
@@ -71,6 +75,11 @@
         document.querySelector('form').addEventListener('submit', function () {
             document.getElementById('loading-screen').style.display = 'block';
         });
+        var scroll = document.getElementById('scroll');
+        scroll.click();
+        // const element = document.getElementById("output");
+        // element.scrollIntoView({ behavior: 'smooth'});
     </script>
+
 </body>
 </html>

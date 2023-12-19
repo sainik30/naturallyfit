@@ -4,6 +4,9 @@ body {
     justify-content: center;
     flex-direction: column;
 }
+html{
+    scroll-behavior: smooth;
+}
 
 h1 {
 
@@ -72,7 +75,7 @@ h4 {
     flex-direction: column;
     align-items: center;
     height: 50px;
-    width: 500px;
+    width: 600px;
     font-size: 1.2rem;
     font-family: 'Macondo', cursive;
     border: 4px solid #248e57;
@@ -111,7 +114,7 @@ h4 {
 }
 
 .contents {
-    height: 100vh;
+    height: 90.25vh;
     background-image: url("../files/nfbackground.png"); /* Replace with your desired background image URL */
     background-size: cover;
 }
@@ -120,6 +123,7 @@ h4 {
     position: absolute;
     top: 60%;
     left: 50%;
+    width: 600px;
     transform: translate(-50%, -50%);
 }
 
@@ -299,6 +303,11 @@ a:hover {
    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black background for the inner div */
    border-radius: 10px;
    }
+
+  
+
+
+  
 
 
 

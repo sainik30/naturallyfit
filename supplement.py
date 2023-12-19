@@ -9,7 +9,7 @@ key = os.environ.get("API_KEY")
 def get_remedies(user_input):
     prompts = []
     response = []
-    prompt = "Remedies, natural healthy food, yoga exercise for " + user_input +  ". Give the output in 3 separate blocks of paragraph with points in each paragraph."
+    prompt = "Remedies, natural healthy food, yoga exercise for " + user_input +  ". Give the output in 3 separate blocks of paragraph with points in each paragraph and headings as Remedies, Natural healthy food, Yoga exercise"
 
     openai.api_key = key 
     messages = [{"role": "system", "content": "You are an intelligent assistant."}]
